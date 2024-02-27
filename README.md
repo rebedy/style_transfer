@@ -15,9 +15,10 @@ This is a TensorFlow implementation of the paper [A Neural Algorithm of Artistic
 
 - TensorFlow
 - NumPy
-- SciPy
+- Scikit-image
 - Pillow
-- Matplotlib
+- SciPy
+
 
 ### Installation
 
@@ -35,7 +36,16 @@ This will create a new conda environment called `style_transfer` and install the
 To apply the style of the style image to the content image, run the following command:
 
 ```bash
-python style_transfer.py --content content.jpg --style style.jpg --output output.jpg
+python style_transfer.py --content content.jpg --styles style.jpg --output output.jpg
 ```
 
 This will apply the style of the style image to the content image and save the result in the output directory.
+
+## Example
+
+You can use the following command to apply the style of the style image to the content image using the different optimizer [adam, adagrad, adadelta]:
+
+```bash
+python style_transfer.py --content imgs/content.jpg --styles imgs/style.jpg --output imgs/output_adadelta.jpg --optimizer adadelta
+```
+
