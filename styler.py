@@ -160,11 +160,11 @@ def styler(pre_trained_network,
         loss = content_loss + style_loss + total_variation_loss
 
         # optimizer setup
-        if optimizer is 'adam':
+        if optimizer == 'adam':
             train_step = tf.train.AdamOptimizer(learning_rate, beta1=0.9, beta2=0.999, epsilon=1e-08).minimize(loss)
-        elif optimizer is 'adagrad':
+        elif optimizer == 'adagrad':
             train_step = tf.train.AdagradOptimizer(learning_rate, initial_accumulator_value=0.1, use_locking=False, name='Adagrad').minimize(loss)
-        elif optimizer is 'adadelta':
+        elif optimizer == 'adadelta':
             train_step = tf.train.AdadeltaOptimizer(learning_rate, rho=0.95, epsilon=1e-08, use_locking=False, name='Adadelta').minimize(loss)
         else:
             raise ValueError('Unknown optimizer')

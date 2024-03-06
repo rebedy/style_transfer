@@ -20,7 +20,7 @@ def build_parser():
                         dest='styles', nargs='+', help='one or more style images', metavar='STYLE', required=True)
     parser.add_argument('--output',
                         dest='output', help='output path', metavar='OUTPUT', required=True)
-    parser.add_argument('--iterations', type=int, default=1000,
+    parser.add_argument('--iterations', type=int, default=700,
                         dest='iterations', help='iterations (default %(default)s)', metavar='ITERATIONS')
     parser.add_argument('--print-iterations', type=int,
                         dest='print_iterations', help='statistics printing frequency', metavar='PRINT_ITERATIONS')
@@ -140,8 +140,10 @@ class StyleTrasfer:
             if iteration is not None:
                 if self.opt.checkpoint_output:
                     output_file = self.opt.checkpoint_output % iteration
+                    # self.img_save(output_file, combined_rgb)
             else:
                 output_file = self.opt.output
+                # self.img_save(output_file, combined_rgb)
             if output_file:
                 self.img_save(output_file, combined_rgb)
 

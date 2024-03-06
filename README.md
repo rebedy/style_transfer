@@ -50,3 +50,8 @@ You can use the following command to apply the style of the style image to the c
 python style_transfer.py --content imgs/content.jpg --styles imgs/style.jpg --output imgs/output_adadelta.jpg --optimizer adadelta
 ```
 
+## Results
+
+| <img src='imgs/style.jpg'> | <img src='imgs/output.jpg' width=50%> | 
+|:--:|:--:|
+| *Style* | *Output* |
