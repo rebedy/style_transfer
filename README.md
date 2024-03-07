@@ -19,7 +19,6 @@ This is a TensorFlow implementation of the paper [A Neural Algorithm of Artistic
 - Pillow
 - SciPy
 
-
 ### Installation
 
 To install the required packages, run the following command:
